@@ -1,15 +1,15 @@
 let players = [ //BASE DE DADO DO PLAYER
     {
         name: 'Warrior',
-        hp: 27,
-        atk: 11,
+        hp: 25,
+        atk: 9,
         def: 5,
         image_url: 'warriorandwizard/warriorcard.png',
     },
     {
         name: 'Wizard',
-        hp: 24,
-        atk: 14,
+        hp: 20,
+        atk: 11,
         def: 3,
         image_url: 'warriorandwizard/wizardcard.png',
     }
