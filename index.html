@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warrior Vs Wizards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="menus">
+        <div class="overlay-background-logo" id="overlay-logo"> <!--OVERLAY DE GRADIENT NO MENU PRINCIPAL-->
+        </div>
+        <div class="overlay">
+        </div>
+        <div class="main-menu" id="main-menu"> <!--MENU PRINCIPAL-->
+            <h1>WARRIORS VS WIZARDS</h1>
+            <div class="mini_line"></div>
+            <button class="options" id="character-select" onclick="criar_menu_character_select()">
+                <h3>Jogar</h3>
+            </button>
+            <button class="options" id="options-menu" onclick="criar_menu_cartas()">
+                <h3>Cartas</h3>
+            </button>
+            <button class="options" id="option" onclick="criar_menu_options()">
+                <h3>Opções</h3>
+            </button>
+            <button class="options" id="rules-m" onclick="criar_menu_regras()">
+                <h3>Regras</h3>
+            </button>
+        </div>
+        <div class="main-menu" id="class_select_menu" style="display: none;"> <!--MENU DE SELEÇÃO DE CLASSES-->
+            <h1>SELECIONAR CLASSE</h1>
+            <div class="mini_line"></div>
+            <button class="options" id='warrior' onclick="game_start_on_warrior()">
+                <h3>Warrior</h3>
+            </button>
+            <button class="options" id="wizard" onclick="game_start_on_wizard()">
+                <h3>Wizard</h3>
+            <button class="options" id="return" onclick="retornar_menu_principal()">
+                <h3>Voltar</h3>
+        </div>
+        <div class="main-menu" id="cards_menu" style="display: none;"> <!--MENU DE SELEÇÃO DE CARTAS-->
+            <h1>Cartas</h1>
+            <div class="mini_line"></div>
+            <section class="cards_section" id="cards-section-create">
+
+            </section>
+            <button class="options" id="return" onclick="retornar_menu_principal()">
+                <h3>Voltar</h3>
+            </button>
+        </div>
+        <div class="main-menu" id="config-menu" style="display: none;"> <!--MENU DE OPÇÕES-->
+            <h1>CONFIGURAÇÕES</h1>
+            <div class="mini_line"></div>
+            <h2>DIFICULDADE</h2>
+            <button class="options" id="select-dificultty" onclick="change_difficulty()"></button>
+            <button class="options" id="return" onclick="retornar_menu_principal()">Voltar</button>
+        </div>
+        <div class="main-menu" id="rules" style="display: none;"> <!--MENU DE REGRAS-->
+            <h1>REGRAS</h1>
+            <div class="mini_line"></div>
+            <section class="regras-sec">No início do combate, o jogador escolhe uma classe e enfrenta um inimigo aleatorio baseado na dificuldade.</section>
+            <section class="regras-sec">Atacar o inimigo faz com que ele receba dano equivalente ao ataque de sua classe, isso também conta para o inimigo.</section>
+            <section class="regras-sec">Defender dobra sua defesa até ser atacado novamente, não é acumulável e o inimigo também usa.</section>
+            <section class="regras-sec">Esquivar possui 50% de chance de não receber dano e dobrar o dano de seu próximo ataque, inimigo também usa.</section>
+            <button class="options" id="return" onclick="retornar_menu_principal()">Voltar</button>
+        </div>
+        <div class="main-menu" id="combat_menu" style="display: none;"> <!--MENU DE COMBATE-->
+            <h1>COMBATE</h1>
+            <div class="mini_line"></div>
+            <button class="options" id='warrior' onclick="attack()">
+                <h3>Atacar</h3>
+            </button>
+            <button class="options" id="wizard" onclick="defense()">
+                <h3>Defender</h3>
+            <button class="options" id="return" onclick="esquiva()">
+                <h3>Esquivar</h3>
+            </button>
+            <h3 class="log">Log de Batalha</h3>
+            <section id="log-de-batalha">
+                
+            </section>
+        </div>
+        <div class="combat-screen"> <!--BACKGROUND QUE FICA A DIREITA DA TELA DURANTE A LUTA-->
+            <div class="background-main-menu" id="background-menu">
+                <img src="img/Logo.png" alt="logo" class="logo-photo" >
+            </div>
+            <div class="background-main-menu" id="terrain-scene" style="display: none;">
+                <img src="img/terrain.jpg" alt="battle-scene" class="terrain-photo">
+            </div>
+            <div class="card-format" id="card-player" style="display: none;">
+                <h3 id="player-name"></h3>
+                <img src="" alt="player" id="img-player-define">
+                <span id="hp-player"></span>
+                <span id="def-player"></span>
+            </div>
+            <div class="card-format" id="card-enemy" style="display: none;">
+                <h3 id="enemy-name"></h3>
+                <img src="" alt="enemy" id="img-enemy-define">
+                <span id="hp-enemy"></span>
+                <span id="def-enemy"></span>
+            </div>
+        </div>
+        <div class="main-menu" id="final-menu" style="display: none;"> <!--TELA DE VITORIA-->
+            <h1 id="msg-win-lose"></h1>
+            <div class="mini_line"></div>
+            <button class="options" id='warrior' onclick="reset()">
+                <h3>Continuar</h3>
+        </div>
+    </div>
+    </main>
+
+    <script src="dados.js"></script>
+    <script src="script.js"></script> 
+</body>
+</html>

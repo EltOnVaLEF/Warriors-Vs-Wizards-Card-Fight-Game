@@ -1,0 +1,332 @@
+@import url(https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap);
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "MedievalSharp", cursive;
+
+}
+
+
+body {
+    overflow: hidden;
+    background-image: url("img/WoddenBG.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.overlay {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(67, 40, 24, 0.2), rgba(255, 230, 167, 0.2));
+    position: absolute;
+    box-shadow: 5px 0px 3px rgb(80, 42, 42);
+
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 50px black;
+}
+
+.background-main-menu {
+    margin-left: 50%;
+    width: 50%;
+    border-left: 10px double #5c3925;
+    display: flex
+}
+
+.overlay-background-logo {
+    display: flex;
+    align-items: center;
+    margin-left: 50%;
+    padding: 0 300px;
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(60, 145, 230, 1), rgba(250, 130, 76, 1));
+    background-size: 100% 500%;
+    position: absolute;
+    animation: overlay-warrior-wizard 5s infinite alternate ease-in-out;
+}
+
+@keyframes overlay-warrior-wizard {
+    0%{
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0.4;
+    }
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background: #BB9457;
+    background-image: url('img/WoddenBG.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply ;
+    position: absolute;
+    text-align: center;
+    margin-left: 13vw;
+    margin-top: 5vw;
+    margin-right: 50%;
+    width: 25%;
+    height: 75%;
+    border: 5px solid #6F1D1B;
+    border-radius: 30px;
+    box-shadow: inset 0px 0px 10px black;
+}
+
+.mini_line {
+    background-color: #432818;
+    width: 70%;
+    height: 3px;
+    margin-bottom: 10%;
+}
+
+.options {
+    background-color: #ffe6a7ff;
+    background-image: url('img/WoddenBG.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    width: 10vw;
+    height: 40px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    margin-bottom: 12%;
+    font-size: 20px;
+    font-family: "MedievalSharp", cursive;
+    font-weight: bold;
+}
+
+button:hover{
+    box-shadow: 0px 0px 20px #ffe6a7ff;
+    transition: 0.2s;
+    transform: scale(1.1);
+}
+
+button:active{
+    background-color: #bb9457ff;;
+    border: 2px solid #432818ff;
+}
+
+
+h3 {
+    margin: 0;
+    font-family: "MedievalSharp", cursive;
+}
+
+.madeira_BG {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.combat-screen {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-format {
+    background-color: #bb9457ff;
+    background-image: url('img/WoddenBG.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    flex-direction: column;
+    position: absolute;
+    width: 170px;
+    border: 4px solid #432818ff;
+    left: 70%;
+    border-radius: 4px;
+    
+}
+
+#card-player {
+    top: 57%;
+}
+
+#card-enemy {
+    top: 5%
+}
+
+.card-format:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.card-format:active {
+    transform: scale(1.1);
+}
+
+.card-format img {
+    box-shadow: 0px 0px 10px black;
+}
+
+span {
+    font-weight: bold;
+    position: absolute;
+}
+
+#hp-player {
+    top: 88%;
+    left: 9%;
+}
+
+#def-player {
+    top: 88%;
+    left: 85%;
+}
+
+#def-enemy {
+    top: 88%;
+    left: 85%;
+}
+
+#hp-enemy {
+    top: 88%;
+    left: 9%;
+}
+
+.card-format h3 {
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+#cards_menu section {
+    height: 60%;
+    margin-top: 0;
+}
+
+section {
+    padding-top: 10px;
+    margin: auto;
+    width: 70%;
+    height: 20%;
+    background-color: #ffe6a7ff;
+    background-image: url('img/WoddenBG.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    border: 2px #432818ff solid;
+    box-shadow: 0px 0px 5px black;
+    overflow-y: auto;
+}
+
+#log-de-batalha h3 {
+    text-decoration: underline;
+    position: fixed;
+    padding-bottom: 10px;
+}
+
+#log-de-batalha h4 {
+    margin: 0 auto;
+    font-size: 14px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.log {
+    margin-top: auto;
+}
+
+#final-menu {
+    position: fixed;
+    top: 0;
+}
+
+.cards-limiter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    background-color: #bb9457ff;
+    background-image: url('img/WoddenBG.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    width: 170px;
+    border: 4px solid #432818ff;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.cards-limiter h3 {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.cards-limiter h5{
+    font-size: 17px;
+    position: absolute;
+    margin: 0 auto;
+    top: 89%;
+}
+
+#cards-hp {
+    left: 8%
+
+}
+
+#cards-def {
+    right: 10%;
+}
+
+#select-dificultty {
+    margin-bottom: 50% ;
+}
+
+.regras-sec {
+    margin: 0 auto;
+    height: auto;
+    width: 80%;
+    font-weight: bold;
+    margin-bottom: 20px;
+    overflow-y:hidden;
+}
+
+#rules {
+    height: 90%;
+    margin-top: 20px;
+}
+
+@keyframes end-screen-appear {
+    0%{opacity: 0
+}  100% {
+    opacity: 0.5;
+}
+}
+
+@keyframes dead-cards {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }    
+    100% {
+        opacity: 0;
+        transform: scale(1.4);
+        display: none;
+    }
+}
+
