@@ -357,10 +357,10 @@ function enemy_IA_ESQ () { //IA DO INIMIGO CASO O JOGADOR ESQUIVE
     if (oponent_action == 0) { //Inimigo atacou também
         battle_log.innerHTML += `<h4>${enemy.name_enemy} atacou ${player.name_player};</h4>`
         if (esquivar() == true) { //se o inimigo atacar, verifica se o player esquivou
-            battle_log.innerHTML += `<h4>${player.name_player} se esquivou do ataque de ${enemy.atk_enemy}, por causa disso, seu dano será dobrado até o proximo ataque;</h4>`
+            battle_log.innerHTML += `<h4>${player.name_player} se esquivou do ataque de ${enemy.name_enemy}, por causa disso, seu dano será dobrado até o proximo ataque;</h4>`
             player_damage_mult = 2
         } else {
-            battle_log.innerHTML += `<h4>${player.name_player} tentou se esquivar do ataque de${enemy.name_enemy}, mas falhou e recebeu o dano assim mesmo;</h4>`
+            battle_log.innerHTML += `<h4>${player.name_player} tentou se esquivar do ataque de ${enemy.name_enemy}, mas falhou e recebeu o dano assim mesmo;</h4>`
             dano = Math.max(0,enemy.atk_enemy*danamge_multiplier - player.def_player)
             player.hp_player -= dano
             danamge_multiplier = 1
@@ -380,7 +380,7 @@ function enemy_IA_ESQ () { //IA DO INIMIGO CASO O JOGADOR ESQUIVE
         }
         
     }else { //Inimigo tenta esquivar
-            battle_log.innerHTML += `<h4>${enemy.name_enemy} e ${player.name_player}se esquivam ao mesmo tempo, nada acontece;</h4>`
+            battle_log.innerHTML += `<h4>${enemy.name_enemy} e ${player.name_player} se esquivam ao mesmo tempo, nada acontece;</h4>`
 
     } 
 }  
