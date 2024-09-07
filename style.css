@@ -342,7 +342,8 @@ section {
         align-items: center;
         align-content: center;
         position: absolute;
-        height: 295px;
+        max-height: 304px;
+        height: 400px;
     }
     .main-menu {
         width: 80%;
