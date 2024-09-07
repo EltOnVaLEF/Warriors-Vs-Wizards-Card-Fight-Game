@@ -395,4 +395,9 @@ section {
     .regras-sec {
         overflow-y: auto;
     }
+    span {
+    font-weight: bold;
+    position: absolute;
+    font-size: 11px;
+ }
 }
