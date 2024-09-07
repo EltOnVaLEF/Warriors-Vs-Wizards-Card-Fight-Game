@@ -335,15 +335,14 @@ section {
         margin-top: 10px;
         border: 6px solid #6F1D1B;
         margin-bottom: 0;
+        position: relative;
+        align-items: center;
+
     }
     .overlay-background-logo {
-        width: 75%;
+        width: 100%;
         margin: 0 auto;
-        align-items: center;
-        align-content: center;
-        position: absolute;
-        max-height: 304px;
-        height: 400px;
+        
     }
     .main-menu {
         width: 80%;
@@ -374,11 +373,11 @@ section {
         padding: 0;
     }
     .card-format {
-        width: 130px;
+        width: 100px;
         left: 0
     }
     #card-player {
-        left: 37px;
+        left: 64px;
         top: 78px
     }
     
